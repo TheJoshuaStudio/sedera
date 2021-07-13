@@ -1,37 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sedera Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/rzt3mgb.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sedera Form</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://use.typekit.net/rzt3mgb.css">
-</head>
+  <body>
+    <div class="nav-bar">
+      <a href="">
+        <img
+          class="nav-img"
+          src="assets/Sedera_Logo_Horizontal-Lockup_Trust.png"
+          alt="Click to access main page"
+        />
+      </a>
+    </div>
+    <div class="form-body">
+      <h1>Get Started:</h1>
 
-<body>
-  <div class="nav-bar">
-    <a href="">
-      <img class="nav-img" src="assets/Sedera_Logo_Horizontal-Lockup_Trust.png" alt="Click to access main page">
-    </a>
-  </div>
-  <div class="form-body">
-    <h1>Get Started:</h1>
-
-    <div class="input-container form-A">
-      
-      <input id="firstname" class="input" type="text" placeholder=" " required />
-      <div class="cut"></div>
-      <label for="firstName" class="placeholder" aria-required="true">First Name: </label>
-      
-      <!-- <input id="lastname" class="input" type="text" placeholder=" " />
+      <div class="input-container form-A">
+        <input id="firstname" class="input" type="text" placeholder=" " />
         <div class="cut"></div>
-        <label for="lastname" class="placeholder">Last Name:</label> -->
-  </div>
-    
-  </div>
+        <label for="firstName" class="placeholder">First Name: </label>
+      </div>
+      <div class="input-container form-A">
+        <input id="lastname" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="lastname" class="placeholder">Last Name:</label>
+      </div>
+      <div class="input-container form-A">
+        <input id="email" class="input" type="text" placeholder=" " />
+        <div class="cut cut-short"></div>
+        <label for="email" class="placeholder">Email: </label>
+      </div>
+      <div class="input-container form-A phone-div">
+        <input
+          id="phone"
+          class="input phone"
+          type="text"
+          placeholder=" "
+          maxlength="10"
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+          required
+        />
+        <div class="cut cut-short"></div>
+        <label for="Phone-Number" class="placeholder">Phone: </label>
+        <span class="validity"></span>
+      </div>
+      <div class="input-container form-A">
+        <input id="DOB" class="input dob" type="date" placeholder=" " />
+        <div class="cut"></div>
+        <label for="date of birth" class="placeholder">Date of Birth: </label>
+      </div>
+      <div class="input-container form-A">
+        <fieldset class="input fieldset" placeholder="State">
+          <!-- <div class="cut"></div> -->
+          <label for="state"> </label>
 
-</body>
+          <select id="state" name="">
+            <option value="---">Select State of Residence:</option>
+            <option value="Alabama">Alabama</option>
+            <option value="Alaska">Alaska</option>
+            <option value="Arizona">Arizona</option>
+            <option value="Arkansas">Arkansas</option>
+            <option value="California">California</option>
+            <option value="Colorado">Colorado</option>
+            <option value="Connecticut">Connecticut</option>
+            <option value="Delaware">Delaware</option>
+            <option value="District of Columbia">District of Columbia</option>
+            <option value="Florida">Florida</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Guam">Guam</option>
+            <option value="Hawaii">Hawaii</option>
+            <option value="Idaho">Idaho</option>
+            <option value="Illinois">Illinois</option>
+            <option value="Indiana">Indiana</option>
+            <option value="Iowa">Iowa</option>
+            <option value="Kansas">Kansas</option>
+            <option value="Kentucky">Kentucky</option>
+            <option value="Louisiana">Louisiana</option>
+            <option value="Maine">Maine</option>
+            <option value="Maryland">Maryland</option>
+            <option value="Massachusetts">Massachusetts</option>
+            <option value="Michigan">Michigan</option>
+            <option value="Minnesota">Minnesota</option>
+            <option value="Mississippi">Mississippi</option>
+            <option value="Missouri">Missouri</option>
+            <option value="Montana">Montana</option>
+            <option value="Nebraska">Nebraska</option>
+            <option value="Nevada">Nevada</option>
+            <option value="New Hampshire">New Hampshire</option>
+            <option value="New Jersey">New Jersey</option>
+            <option value="New Mexico">New Mexico</option>
+            <option value="New York">New York</option>
+            <option value="North Carolina">North Carolina</option>
+            <option value="North Dakota">North Dakota</option>
+            <option value="Northern Marianas Islands">
+              Northern Marianas Islands
+            </option>
+            <option value="Ohio">Ohio</option>
+            <option value="Oklahoma">Oklahoma</option>
+            <option value="Oregon">Oregon</option>
+            <option value="Pennsylvania">Pennsylvania</option>
+            <option value="Puerto Rico">Puerto Rico</option>
+            <option value="Rhode Island">Rhode Island</option>
+            <option value="South Carolina">South Carolina</option>
+            <option value="South Dakota">South Dakota</option>
+            <option value="Tennessee">Tennessee</option>
+            <option value="Texas">Texas</option>
+            <option value="Utah">Utah</option>
+            <option value="Vermont">Vermont</option>
+            <option value="Virginia">Virginia</option>
+            <option value="Virgin Islands">Virgin Islands</option>
+            <option value="Washington">Washington</option>
+            <option value="West Virginia">West Virginia</option>
+            <option value="Wisconsin">Wisconsin</option>
+            <option value="Wyoming">Wyoming</option>
+          </select>
+        </fieldset>
+      </div>
+      <hr />
+      <h1>Address Form:</h1>
+      <div class="input-container form-address">
+        <input
+          id="StreetAddress"
+          class="input address"
+          type="text"
+          placeholder=" "
+        />
+        <div class="cut cut-long"></div>
+        <label for="Street Address 1" class="placeholder"
+          >Street Address 1:
+        </label>
+      </div>
+      <div class="input-container form-address">
+        <input
+          id="StreetAddress"
+          class="input address"
+          type="text"
+          placeholder=" "
+        />
+        <div class="cut cut-long"></div>
+        <label for="Street Address 2" class="placeholder"
+          >Street Address 2:
+        </label>
+      </div>
+      <div class="input-container form-address">
+        <input id="city" class="input address" type="text" placeholder=" " />
+        <div class="cut cut-short"></div>
+        <label for="City" class="placeholder">City: </label>
+      </div>
+      <div class="input-container form-A">
+        <fieldset class="input fieldset" placeholder="State">
+          <!-- <div class="cut"></div> -->
+          <label for="state"> </label>
 
+          <select id="state" name="">
+            <option value="---">Select State of Residence:</option>
+            <option value="Alabama">Alabama</option>
+            <option value="Alaska">Alaska</option>
+            <option value="Arizona">Arizona</option>
+            <option value="Arkansas">Arkansas</option>
+            <option value="California">California</option>
+            <option value="Colorado">Colorado</option>
+            <option value="Connecticut">Connecticut</option>
+            <option value="Delaware">Delaware</option>
+            <option value="District of Columbia">District of Columbia</option>
+            <option value="Florida">Florida</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Guam">Guam</option>
+            <option value="Hawaii">Hawaii</option>
+            <option value="Idaho">Idaho</option>
+            <option value="Illinois">Illinois</option>
+            <option value="Indiana">Indiana</option>
+            <option value="Iowa">Iowa</option>
+            <option value="Kansas">Kansas</option>
+            <option value="Kentucky">Kentucky</option>
+            <option value="Louisiana">Louisiana</option>
+            <option value="Maine">Maine</option>
+            <option value="Maryland">Maryland</option>
+            <option value="Massachusetts">Massachusetts</option>
+            <option value="Michigan">Michigan</option>
+            <option value="Minnesota">Minnesota</option>
+            <option value="Mississippi">Mississippi</option>
+            <option value="Missouri">Missouri</option>
+            <option value="Montana">Montana</option>
+            <option value="Nebraska">Nebraska</option>
+            <option value="Nevada">Nevada</option>
+            <option value="New Hampshire">New Hampshire</option>
+            <option value="New Jersey">New Jersey</option>
+            <option value="New Mexico">New Mexico</option>
+            <option value="New York">New York</option>
+            <option value="North Carolina">North Carolina</option>
+            <option value="North Dakota">North Dakota</option>
+            <option value="Northern Marianas Islands">
+              Northern Marianas Islands
+            </option>
+            <option value="Ohio">Ohio</option>
+            <option value="Oklahoma">Oklahoma</option>
+            <option value="Oregon">Oregon</option>
+            <option value="Pennsylvania">Pennsylvania</option>
+            <option value="Puerto Rico">Puerto Rico</option>
+            <option value="Rhode Island">Rhode Island</option>
+            <option value="South Carolina">South Carolina</option>
+            <option value="South Dakota">South Dakota</option>
+            <option value="Tennessee">Tennessee</option>
+            <option value="Texas">Texas</option>
+            <option value="Utah">Utah</option>
+            <option value="Vermont">Vermont</option>
+            <option value="Virginia">Virginia</option>
+            <option value="Virgin Islands">Virgin Islands</option>
+            <option value="Washington">Washington</option>
+            <option value="West Virginia">West Virginia</option>
+            <option value="Wisconsin">Wisconsin</option>
+            <option value="Wyoming">Wyoming</option>
+          </select>
+        </fieldset>
+      </div>
+      <div class="input-container form-address">
+        <input
+          id="postCode"
+          class="input"
+          type="text"
+          placeholder=" "
+          maxlength="5"
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+          required
+        />
+        <div class="cut"></div>
+        <label for="Street Address 1" class="placeholder">Post Code: </label>
+      </div>
+
+      <hr />
+      <h1>Medium Form:</h1>
+      <div class="input-container form-A">
+        <input id="firstname" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="firstName" class="placeholder">First Name: </label>
+      </div>
+      <div class="input-container form-A">
+        <input id="lastname" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="lastname" class="placeholder">Last Name:</label>
+      </div>
+      <div class="input-container form-A">
+        <input id="email" class="input" type="text" placeholder=" " />
+        <div class="cut cut-short"></div>
+        <label for="email" class="placeholder">Email: </label>
+      </div>
+      <hr />
+      <h1>Short Form:</h1>
+      <div class="input-container form-A">
+        <input id="fullName" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="fullName" class="placeholder">Full Name: </label>
+      </div>
+      <div class="input-container form-A">
+        <input id="email" class="input" type="text" placeholder=" " />
+        <div class="cut cut-short"></div>
+        <label for="email" class="placeholder">Email: </label>
+      </div>
+    </div>
+  </body>
 </html>

@@ -37,7 +37,7 @@ h1 {
 }
 
 .form-A {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .input {
@@ -62,8 +62,15 @@ h1 {
   top: -20px;
   transform: translateY(0);
   transition: transform 200ms;
-  width: 76px;
+  width: 86px;
 }
+.cut-short {
+  width: 60px;
+}
+.cut-long {
+  width: 106px;
+}
+
 .input:focus ~ .cut,
 .input:not(:placeholder-shown) ~ .cut {
   transform: translateY(8px);
@@ -93,3 +100,44 @@ h1 {
 .input:focus ~ .placeholder {
   color: #1b5543;
 }
+select {
+  border: none;
+  color: #1b5543;
+  height: fit-content;
+  font-size: 16px;
+}
+.fieldset {
+  line-height: 18px;
+  width: 10px;
+}
+
+.form-address {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.address {
+  width: 70%;
+}
+
+/* .phone-div {
+  position: relative;
+}
+
+input:invalid + span:after {
+  position: absolute;
+  content: "✖";
+  padding-left: 30px;
+  color: #8b0000;
+}
+
+input:valid + span:after {
+  position: relative;
+  content: "✓";
+  padding-left: 5px;
+  color: #009000;
+} */
+
+/* .dob {
+  color: #262626;
+} */ ;
