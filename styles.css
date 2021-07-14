@@ -3,9 +3,8 @@ body {
   font-weight: 100;
   background-color: #f6f4f3;
 }
-
+/* NAVIGATION */
 .nav-bar {
-  /* height: 2em; */
   background-color: #ffff !important;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
   position: absolute 0%;
@@ -16,18 +15,14 @@ body {
   padding: 10px 0 10px 30px;
 }
 
+/* FORM MAIN CONTAINER  */
+
 .form-body {
-  /* background-color: #f6f4f3; */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
   position: static 100%;
-  /* /* width: 100; */
-  height: 2220px;
-  left: 435px;
-  /* top: 0px; */
-  margin-top: 0.3%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   position: absolute;
   right: 0px;
   left: 0px;
@@ -41,22 +36,21 @@ h1 {
   padding-top: 3%;
   color: #1b5543;
   align-self: center;
-  padding-left: 5%;
 }
+
+/* INPUT FIELD  */
 
 .input-container {
   height: 50px;
   position: relative;
-  /* width: 500%; */
-  margin-left: 3%;
   margin-bottom: 10px;
-  /* display: list-item; */
+  align-self: center;
+  width: 40%;
 }
 
 .form-A {
   margin-top: 30px;
   margin-bottom: 10px;
-  /* width: 500%; */
 }
 
 .input,
@@ -71,9 +65,18 @@ fieldset {
   height: 100%;
   outline: 0;
   padding: 4px 20px 0;
-  /* width: 30%; */
-  width: 150%;
+  width: 100%;
 }
+
+.long-form,
+.medium-form,
+.address-form,
+.short-form {
+  width: 100%;
+  display: contents;
+}
+
+/* CUT FOR TRANSFORMING PLACEHOLDER  */
 
 .cut {
   background-color: #f6f4f3;
@@ -93,10 +96,7 @@ fieldset {
   width: 106px;
 }
 
-.address-cut {
-  height: 25px;
-  top: -10px;
-}
+/* PLACEHOLDER TRANFORM CODE  */
 
 .input:focus ~ .cut,
 .input:not(:placeholder-shown) ~ .cut {
@@ -115,10 +115,6 @@ fieldset {
   top: 20px;
 }
 
-.placeholder-address {
-  top: 37px;
-}
-
 .input:focus ~ .placeholder,
 .input:not(:placeholder-shown) ~ .placeholder {
   transform: translateY(-30px) translateX(10px) scale(0.75);
@@ -131,58 +127,38 @@ fieldset {
 .input:focus ~ .placeholder {
   color: #1b5543;
 }
+
+/* STATE FIELD | SELECT   */
+
 select {
   border: none;
   color: #1b5543;
   height: fit-content;
   font-size: 16px;
   padding-top: 10px;
+  width: 100%;
 }
 .fieldset {
   line-height: 18px;
-  width: 125%;
-  margin-left: 20px;
-}
-.fieldset-address {
-  width: 72%;
-  margin-left: 0;
 }
 
-.form-address {
-  margin-top: 30px;
-  padding-top: 15px;
-  width: 100%;
-}
-
-.address {
-  width: 70%;
-}
-
-.post-code {
-  width: 70%;
-}
-
-.address-button {
-  margin-left: 30%;
-  padding-right: 10%;
-}
+/* SUBMIT BUTTON  */
 
 .submit {
   background-color: #1b5543;
   border-radius: 18px;
   border: 0;
-  /* box-sizing: border-box; */
   color: #eee;
   cursor: pointer;
   font-size: 18px;
   height: 30px;
-  /* margin-top: 38px; */
+
   outline: 0;
   text-align: center;
   width: 10%;
+  margin-top: 2%;
   margin-bottom: 10px;
   align-self: center;
-  margin-left: 10%;
 }
 
 .submit:active {
@@ -190,17 +166,7 @@ select {
 }
 
 hr {
-  margin-top: 10px;
-}
-
-.long-form,
-.medium-form,
-.short-form {
+  border: solid 1px #123f31;
   width: 100%;
-  display: contents;
-}
-
-.address-form {
-  width: 50%;
-  padding-left: 25%;
+  margin-top: 3%;
 }
